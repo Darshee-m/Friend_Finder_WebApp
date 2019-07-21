@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+{% if user.is_authenticated %}
+  <header>
+  <p style="margin-left:625px;"><a href="{% url 'logout' %}" style="text-decoration: none; background-color: none;  ">Logout</a></p>
+</header>
+  <br>
+  <br>
+ <p style="font-size: 25px;  font-family: Comic Sans MS ">Welcome to Friend Finder {{ user.username }}!</p><br>
+ <p style="font-size: 20px; text-align: left; font-family: Georgia">We will try and help you find people with a personality similar like yours! Let's analyze your personality and try and find a perfect match. Happy friend hunting! </p>
+ <br>
+ <br>
+ <br>
+ <p style="color: blue; font-family: Bookman; font-size: 30px;">What would you like to do?</p>
+ <br>
+ <div class="container">
+ 	<div class="row">
+ 		<div class="col-md-3">
+        <a class="btn btn-primary btn-block" href="{% url 'createpost' %}">
+ 				Complete your profile
+        </a>
+ 			<br>		
+ 			<a class="btn btn-primary btn-block" href="#">
+ 				Allow us to access your twitter 
+ 			</a>
+ 		</div>
+ 		<div class="col-md-3">
+ 			<a class="btn btn-primary btn-block" href="{% url 'quiz' %}">
+ 				Take the personality quiz
+      </a>
+ 			<br>
+ 			<a class="btn btn-primary btn-block" href="{% url 'showusers' %}">
+ 				Find friends
+ 			</a>	
+ 		</div>	
+ 	</div>	
+ </div>
+
+{% else %}
+
+      <div class="text">
+      	<br>
+      	<br>
+        <h1 style="color: blue; font-family: Bookman">Welcome To Friend Finder</h1>
+        <br>
+        <span style=" font-size: 20px; font-family: Comic Sans MS ">Hola Amigos!</span><br><br>
+        <p style="font-size: 22px; text-align: left; font-family: Georgia">Making new friends as an adult isn’t easy. It seems that everyone already has their friend group and they’re too busy to expand it.	 Simply meeting new people becomes increasingly rare. 
+		<br>Luckily, making new friends doesn’t have to entail removing the headphones of strangers just to see if they’re good friendship material or not. 
+		Get started and connect with people you are compatible with.</p>
+		<br>
+		<br>
+        <p><a href="{% url 'login' %}" class="btn btn-primary pill px-4 py-3 text-white">Get Started</a></p>
+
+      </div>
+
+{% endif %}
+{% endblock %}

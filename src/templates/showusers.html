@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>User Details</title>
+</head>
+<body>
+	{%if users%}
+	<h2 style="color: blue; font-family: Bookman">Following users match your personality!</h2>
+	<br>
+        <span style=" font-size: 20px; font-family: Comic Sans MS ">Cheers to new friendships!</span><br><br>
+	<ol>
+		{% for user in users %}
+		<li>
+			Username: {{user.user}} <br>
+			Email address: {{user.email}}<br>
+			City: {{user.city}}<br>
+			Country:{{user.country}}<br>
+			<p>-----------------------------------</p><br
+		</li>
+		{% endfor %}
+	</ol>
+	{% endif %}
+</body>
+</html>

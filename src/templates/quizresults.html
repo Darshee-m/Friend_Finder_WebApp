@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Quiz Details</title>
+</head>
+<body>
+	{%if res%}
+	<ol>
+		{% for r in res %}
+		<li>
+			Username: {{r.user}} <br>
+			Q1: {{r.q1}}<br>
+			Q2: {{r.q2}}<br>
+			Q3: {{r.q3}}<br>
+			Q4: {{r.q4}}<br>
+			Q5: {{r.q5}}<br>
+			Q6: {{r.q6}}<br>
+			Q7: {{r.q7}}<br>
+			Q8: {{r.q8}}<br>
+			Q9: {{r.q9}}<br>
+			Q10: {{r.q10}}<br>
+			
+			<p>-----------------------------------</p><br
+		</li>
+		{% endfor %}
+	</ol>
+	{% endif %}
+	
+</body>
+</html>

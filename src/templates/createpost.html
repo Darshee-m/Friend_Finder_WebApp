@@ -1,0 +1,28 @@
+<html>
+<head>
+<title>Create a Post </title>
+</head>
+
+<body>
+<h1>Complete Your Profile </h1>
+<form action="" method="POST">
+{% csrf_token %}
+
+Email Address:<br>
+<input type="text" name="emailid"/><br/>
+Mobile Number: <br/>
+<input type="text" name="mobileno"/><br/>
+Gender: <br/>
+  <input type="radio" name="gender" value="male"> Male<br>
+  <input type="radio" name="gender" value="female"> Female<br>
+  <input type="radio" name="gender" value="other"> Other<br>
+City: <br/>
+<input type="text" name="city"/><br/>
+Country: <br/>
+<input type="text" name="country"/><br/>
+
+<input type="submit" value="Post"/>
+</form>
+</body>
+
+</html>

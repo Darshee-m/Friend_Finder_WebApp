@@ -1,0 +1,40 @@
+ {% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="static/assets/style.css">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+	 <link href="{% static 'main.css' %}" rel="stylesheet" type="text/css">
+</head>
+<body>
+  <main>
+
+  	<div class="container">
+  		<br>
+  		<br>
+  		<div class="row">
+  			<div class="col-md-6">
+  					<img src="{% static 'f.jpg' %}" alt="" height="40%" width="90%" />
+  			</div>
+  			<div class="col-md-6">
+  				<center>	
+	  			{% block content %}
+	    		{% endblock %}
+	    		</center>
+  			</div>
+  		</div>
+  		
+  	</div>
+  	
+  		
+ 
+  	
+  
+
+  </main>
+</body>
+</html>
