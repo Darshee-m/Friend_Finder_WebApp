@@ -7,7 +7,7 @@ Luckily, making new friends doesn’t have to entail removing the headphones of 
 
 
 ## **Features**
-- Real Time Application
+- Sentiment A
 - Sound Recording in background
 - Decibel Measurement.
 - Storage on Cloud(MQTT) to save user device memory
